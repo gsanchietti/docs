@@ -71,11 +71,14 @@ Administrator Manual
    weekly_report
    hotspot
 
-.. toctree::
-   :maxdepth: 2
-   :caption: NethForge modules
+
+.. only:: nscom
+
+   .. toctree::
+      :maxdepth: 2
+      :caption: NethForge modules
  
-   webvirtmgr
+      webvirtmgr
 
 .. toctree::
    :maxdepth: 2
