@@ -58,9 +58,7 @@ Hotspot manager interface
 -------------------------
 
 * go to the hotspot manager
-* go to the *Managers* section and create a new *Manager* of type *Reseller* or *Customer* 
-  More info about *Roles* here : https://nethesis.github.io/icaro/docs/manager/).
-
+* go to the *Managers* section and create a new *Manager* of type *Reseller* or *Customer*. More info about *Roles* here : https://nethesis.github.io/icaro/docs/manager/.
 * do logout and login with the new manager just created
 * go in the *Hotspot* section and create a new hotspot instance
 * click on the hotspot name and configure the captive portal
