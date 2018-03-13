@@ -108,6 +108,6 @@ Free Mode and Voucher Mode
 
 The free mode (default) allows you to make login by yourself without the need of any code, just click on the desired social (or sms, email).
 
-The voucher mode force you to create a voucher (basicly "a code") and give it to every user, only users with the voucher will be allowed to make login.
+The voucher mode force you to create a voucher (basically "a code") and give it to every user, only users with the voucher will be allowed to make login.
 
 
