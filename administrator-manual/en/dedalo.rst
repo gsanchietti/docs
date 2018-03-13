@@ -2,10 +2,9 @@
 Hotspot (Dedalo)
 ================
 
-Hotspot main goal is to provide internet connectivity via wi-fi to casual users.
+Hotspot main goal is to provide internet connectivity via wi-fi to casual users.  
 Users are sent to a captive portal from which they can access the network by authenticating themselves via social login, sms or email.
-The hotspot service allows the regulation, accountability and pricing of Internet access
-in public places, like internet points, hotels and fairs.
+The hotspot service allows the regulation, accountability and pricing of Internet access in public places, like internet points, hotels and fairs.  
 
 Main features:
 
@@ -59,16 +58,18 @@ Hotspot manager interface
 -------------------------
 
 * go to the hotspot manager
-* go to the `Managers` section and create a new ''Manager'' of type ''Reseller'' or ''Customer'' (more info about Roles here : https://nethesis.github.io/icaro/docs/manager/))
+* go to the *Managers* section and create a new *Manager* of type *Reseller* or *Customer* 
+  More info about *Roles* here : https://nethesis.github.io/icaro/docs/manager/).
+
 * do logout and login with the new manager just created
-* go in the ''Hotspot'' section and create a new hotspot instance
+* go in the *Hotspot* section and create a new hotspot instance
 * click on the hotspot name and configure the captive portal
 
 
 Hotspot Unit on |product|
 --------------------------
 
-* go to the section ''Hotspot Unit'' on |product|
+* go to the section *Hotspot Unit* on |product|
 * edit the parameters in the `Hotspot unit registration` page:
 
   * ``Host name`` : Public name of the Hotspot Manager 
@@ -104,6 +105,11 @@ For test purposes only you can also connect a laptop or a pc via ethernet cable 
 This can be very useful if you are experiencing problems and you want to check if they are caused by the hotspot service or by the AP network.
 
 
+Free Mode and Voucher Mode
+--------------------------
 
+The free mode (default) allows you to make login by yourself without the need of any code, just click on the desired social (or sms, email).
+
+The voucher mode force you to create a voucher (basicly "a code") and give it to every user, only users with the voucher will be allowed to make login.
 
 
