@@ -9,12 +9,12 @@ in public places, like internet points, hotels and fairs.
 
 Main features:
 
-* Network isolation between corporate and guests
-* Guests can authenticate themselves using social login (Facebook, Instagram, Linkedin) as well as sms or email login
-* Paid service based on vouchers 
-* Hotspot manager with different accesses type (admin, customer, desk)
-* Bandwidth Limit for each user
-* Export account list and connections report (not yet implemented)
+* network isolation between corporate and guests
+* guests can authenticate themselves using social login (Facebook, Instagram, Linkedin) as well as sms or email login
+* paid service based on vouchers 
+* hotspot manager with different accesses type (admin, customer, desk)
+* bandwidth Limit for each user
+* export account list and connections report (not yet implemented)
 
 How it works?
 =============
@@ -22,12 +22,12 @@ The implementation is based on 2 components:
 
 * a remote hotspot manager with a Web GUI running on a cloud server that allows you to:
 
-  * Create a hotspot instance: usually each instance is referred to a specific location (e.g. Art Cafè, Ritz Hotel and so on)
-  * Edit the captive portal page 
-  * Choose what type of login to use
-  * See session and users logged
+  * create a hotspot instance: usually each instance is referred to a specific location (e.g. Art Cafè, Ritz Hotel and so on)
+  * edit the captive portal page 
+  * choose what type of login to use
+  * see session and users logged
 
-* a client part (dedalo) installed in Nethserver physically connected to the Access Points network : it assigns IP addresses to the clients of the Wi-Fi Network and redirects them to the captive portal for authentication.
+* a client part (dedalo) installed in |product| physically connected to the Access Points network : it assigns IP addresses to the clients of the Wi-Fi Network and redirects them to the captive portal for authentication.
 
 For more detailed information please refer to https://nethesis.github.io/icaro/docs/components/ .
 
@@ -35,15 +35,14 @@ For more detailed information please refer to https://nethesis.github.io/icaro/d
 How to install it
 =================
 
-* Install the server component: https://nethesis.github.io/icaro/docs/provisioning/
+* install the server component: https://nethesis.github.io/icaro/docs/provisioning/
+ This procedure uses Vagrant to provision a Digital Ocean (DO) droplet. If you prefere to use another cloud provider, edit Vagrantfile accordingly.
 
-This procedure uses Vagrant to provision a Digital Ocean (DO) droplet. If you prefere to use another cloud provider, edit Vagrantfile accordingly.
+* configure the server in order to make it possibile to login: https://nethesis.github.io/icaro/docs/configuration/
 
-* Configure the server in order to make it possibile to login: https://nethesis.github.io/icaro/docs/configuration/
+* install the client component in your |product|: https://nethesis.github.io/icaro/docs/client_installation/
 
-* Install the client component in your NethServer: https://nethesis.github.io/icaro/docs/client_installation/
-
-* Please remind that the installation requires at least 3 ethernet interfaces:
+* please remind that the installation requires at least 3 ethernet interfaces:
 
   * 1 for normal LAN clients, marked with green role (you need it even if unused, it can be a VLAN)
   * 1 (or more) for Internet connection, marked with red role
@@ -59,17 +58,17 @@ Configuration
 Hotspot manager interface
 -------------------------
 
-* Go to the hotspot manager
+* go to the hotspot manager
 * go to the `Managers` section and create a new ''Manager'' of type ''Reseller'' or ''Customer'' (more info about Roles here : https://nethesis.github.io/icaro/docs/manager/))
 * do logout and login with the new manager just created
 * go in the ''Hotspot'' section and create a new hotspot instance
 * click on the hotspot name and configure the captive portal
 
 
-Hotspot Unit on Nethserver
+Hotspot Unit on |product|
 --------------------------
 
-* Go to the section ''Hotspot Unit'' on Nethserver
+* go to the section ''Hotspot Unit'' on |product|
 * edit the parameters in the `Hotspot unit registration` page:
 
   * ``Host name`` : Public name of the Hotspot Manager 
@@ -81,7 +80,7 @@ After that just choose the ethernet interface where the hotspot will be active.
 If you have the proxy web active a specific flag in the hotspot unit page will allow you to forward all the hotspot traffic (http and httpas protocols) to the web proxy for logging purposes (Be aware of the privacy implications!).
 
 
-* Connect an AP to the hostpot interface.
+* connect an AP to the hostpot interface.
 
 
 
@@ -101,7 +100,7 @@ they should behave like an ordinary network switch. Follow these recommendations
 * do not use too shoddy products, low quality AP can cause frequent disconnections which impact on the quality of the overall service, 
   the recommendation is even more important if you are using repeaters
 
-* For test purposes only you can also connect a laptop or a pc via ethernet cable to the hotspot interface instead of a Wi-Fi network.
+For test purposes only you can also connect a laptop or a pc via ethernet cable to the hotspot interface instead of a Wi-Fi network.
 This can be very useful if you are experiencing problems and you want to check if they are caused by the hotspot service or by the AP network.
 
 
